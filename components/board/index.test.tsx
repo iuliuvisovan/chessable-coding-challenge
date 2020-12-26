@@ -2,7 +2,7 @@ import React from 'react';
 import { create } from 'react-test-renderer';
 import Board from './index';
 
-const boardTheme = { darkSquareColor: '#b98661', lightSquareColor: '#f4d9b7' };
+const boardTheme = { darkSquareColor: '#919caf', lightSquareColor: '#c0c2cf' };
 
 const tree = create(<Board theme={boardTheme} />);
 
