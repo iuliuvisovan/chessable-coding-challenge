@@ -3,6 +3,6 @@ Chessable coding challenge 😱 😎
 
 How to run:
 
-npm install
+    npm install
 
-expo start -i
+    expo start -i
