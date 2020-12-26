@@ -4,22 +4,22 @@ import { View } from 'react-native';
 import styles from './styles';
 import { ITheme } from '../board';
 
-export default function Square(props: SquareProps) {
-  function isDark(): boolean {
-    const currentRank: number = Math.floor(props.index / 8);
+export function isDark(index: number): boolean {
+  const currentRank: number = Math.floor(index / 8);
 
-    if (currentRank % 2 === 0) {
-      return props.index % 2 !== 0;
-    } else {
-      return props.index % 2 == 0;
-    }
+  if (currentRank % 2 === 0) {
+    return index % 2 !== 0;
+  } else {
+    return index % 2 == 0;
   }
+}
 
+export default function Square(props: SquareProps) {
   return (
     <View
       style={[
         styles.square,
-        { backgroundColor: isDark() ? props.theme.darkSquareColor : props.theme.lightSquareColor },
+        { backgroundColor: isDark(props.index) ? props.theme.darkSquareColor : props.theme.lightSquareColor },
       ]}
     />
   );
